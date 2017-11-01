@@ -131,11 +131,11 @@ module.exports = function(grunt) {
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
+				files: [ 'css/reveal.scss', 'css/_custom.scss' ],
 				tasks: 'css-core'
 			},
 			html: {
-				files: root.map(path => path + '/*.html')
+				files: root.map(path => path + '/**/*.html')
 			},
 			markdown: {
 				files: root.map(path => path + '/*.md')

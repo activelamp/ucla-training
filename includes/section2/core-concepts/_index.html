@@ -1,0 +1,152 @@
+<section>
+    <h1>Drupal Core Concepts</h1>
+</section>
+
+<section>
+    <h2>Drupal Handbook</h2>
+    <p>Getting started with Site building</p>
+    <a class="fragment" href="https://www.drupal.org/site-building">https://www.drupal.org/site-building</a>
+</section>
+
+<section>
+    <h1>General Concepts</h1>
+    <aside class="notes">
+        <ul>
+            <li>Core</li>
+            <li>Modules</li>
+            <li>Themes</li>
+            <li>Profiles</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Core</h2>
+    <ul>
+        <li>The official release of Drupal</li>
+        <li>Good starting point to build simple sites</li>
+        <li>You should not change any files in Drupal core</li>
+        <li>Follows the Open/Close principle</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li>Change the name of your Drupal site.</li>
+        <li class="fragment">Add an article to your site</li>
+        <li class="fragment">Edit the body field of your article</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Modules</h2>
+    <ul>
+        <li>Extend core functionality with contribute code</li>
+        <li>Write code to make Drupal do what you want</li>
+        <li>Ability to enable and uninstall modules from the "Extend" menu in admin section.</li>
+    </ul>
+    <p>We won't be covering module development today.</p>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li>Enable the "Settings Tray" module</li>
+        <li class="fragment">Change the name of your Drupal site</li>
+        <li class="fragment">Edit the User Account menu</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Themes</h2>
+    <ul>
+        <li>Controls the appearance of your site</li>
+        <li>Uses Twig templates to define markup</li>
+        <li>Override markup that Drupal outputs by default</li>
+        <li>Change the appearance of your site with the "Appearance" menu in admin section.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li>Download a contributed theme</li>
+        <li class="fragment">Enable the theme</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Download theme with Composer</h2>
+        <pre class="fragment"><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Download the theme from drupal packagist
+$ composer require drupal/jethro
+    </code></pre>
+    <aside class="notes">
+        <ul>
+            <li>Show the new theme in the filesystem</li>
+            <li>Install the theme on the appearance tab</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Profiles</h2>
+    <ul>
+        <li>Core, Modules, Themes, and Configuration packaged to create a "pre-baked" website</li>
+        <li>Site needs to be installed initially with profile</li>
+        <li>The basis for Drupal distributions</li>
+    </ul>
+    <p>Site Farm Seed is a base distribution that we will extend</p>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li>Download the Acquia Lightning distribution</li>
+        <li class="fragment">Install Drupal using Lightning profile</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Download distribution with Composer</h2>
+    <pre class="fragment"><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Download the distro from drupal packagist
+$ composer create-project acquia/lightning-project lightning
+$ cd lightning
+$ mkdir .docksal
+$ fin up
+$ fin drush si --db-url=mysql://user:user@db/default --root=/var/www/docroot
+$ open http://lightning.docksal
+    </code></pre>
+    <aside class="notes">
+        <ul>
+            <li></li>
+        </ul>
+    </aside>
+</section>
+
+
+<section>
+    <h2>General Concepts (cont)</h2>
+    <p>Content objects that come in core.</p>
+    <ul>
+        <li>Node (Content)</li>
+        <li>Entity Types</li>
+        <li>Comment</li>
+        <li>Taxonomy</li>
+        <li>User</li>
+    </ul>
+</section>
+
+<section>
+    <h2>General Concepts (cont)</h2>
+    <p>Other concepts you should know</p>
+    <ul>
+        <li>Menus</li>
+        <li>Regions & Blocks</li>
+        <li>Views</li>
+        <li>Path</li>
+        <li>Permissions</li>
+    </ul>
+</section>

@@ -1,0 +1,73 @@
+<section>
+	<h1>Objectives</h1>
+	<ul>
+		<li>Understand "best practice" app architecture</li>
+		<li>Understand Dependency Management</li>
+		<li>Understand what Docker does for you</li>
+		<li>Have a running local development environment</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Super Geeky.</h1>
+	<ul>
+		<li>Show an image of a nerd</li>
+	</ul>
+</section>
+
+<section>
+	<h1>Drupal</h1>
+	<aside class="notes">
+		<p>You are all here because we want to learn how to build a website on Drupal.</p>
+	</aside>
+</section>
+
+<section>
+	<h1>Architecture</h1>
+	<em class="fragment">The Twelve Factor App</em>
+	<img src="img/heroku-logo.png" class="fragment no-border">
+</section>
+
+<section>
+	<h2>The Twelve Factors</h2>
+	<ol style="columns: 2; list-style-position: inside; list-style-type: upper-roman;">
+		<li class="fragment" data-fragment-index="0"><span class="fragment highlight-red" data-fragment-index="12">Codebase</span></li>
+		<li class="fragment" data-fragment-index="1"><span class="fragment highlight-red" data-fragment-index="12">Dependencies</span></li>
+		<li class="fragment" data-fragment-index="2"><span class="fragment highlight-red" data-fragment-index="12">Config</span></li>
+		<li class="fragment" data-fragment-index="3"><span class="fragment highlight-red" data-fragment-index="12">Backing Services</span></li>
+		<li class="fragment" data-fragment-index="4">Build, release, run</li>
+		<li class="fragment" data-fragment-index="5">Process</li>
+		<li class="fragment" data-fragment-index="6">Port binding</li>
+		<li class="fragment" data-fragment-index="7">Concurrency</li>
+		<li class="fragment" data-fragment-index="8">Disposability</li>
+		<li class="fragment" data-fragment-index="9">Dev / Prod parity</li>
+		<li class="fragment" data-fragment-index="10">Logs</li>
+		<li class="fragment" data-fragment-index="11"><span class="fragment highlight-red" data-fragment-index="12">Admin processes</span></li>
+	</ol>
+
+	<aside class="notes">
+		<ol>
+			<li>One codebase tracked in revision control, many deploys</li>
+			<li>Explicitly declare and isolate dependencies</li>
+			<li>Store config in the environment</li>
+			<li>Treat backing services as attached resources</li>
+			<li>Strictly separate build and run stages</li>
+			<li>Execute the app as one or more stateless processes</li>
+			<li>Export services via port binding</li>
+			<li>Scale out via the process model</li>
+			<li>Maximize robustness with fast startup and graceful shutdown</li>
+			<li>Keep development, staging, and production as similar as possible</li>
+			<li>Treat logs as event streams</li>
+			<li>Run admin/management tasks as one-off processes</li>
+		</ol>
+	</aside>
+</section>
+
+<section>
+	<h3>Picture of hobbyist and engineer</h3>
+</section>
+
+<section>
+	<h3>Picture of Drupal 8 Logo</h3>
+	<h3 class="fragment">Picture of Composer Logo</h3>
+</section>

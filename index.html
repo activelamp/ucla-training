@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -21,11 +21,27 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
-	<body>
+	<body style="background-image: url(img/presentation-bg2.svg); background-size: cover">
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<p>
+						Getting started with
+					</p>
+					<h1 class="title-slide">Drupal 8 and SiteFarm</h3>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section data-external="includes/introduction.html"> </section>
+				<section data-external="includes/objectives.html"></section>
+				
+				<section data-external="includes/section1/docksal/_index.html"></section>
+				<section data-external="includes/section1/composer/_index.html"></section>
+
+				<section data-external="includes/section2/core-concepts/_index.html"></section>
+				
 			</div>
 		</div>
 
@@ -37,11 +53,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ 
+					    src: 'node_modules/reveal_external/external/external.js', 
+					    condition: function() { 
+					        return !!document.querySelector( '[data-external],[data-external-replace]' ); 
+					} 
+}
 				]
 			});
 		</script>
