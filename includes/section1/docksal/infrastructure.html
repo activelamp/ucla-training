@@ -17,7 +17,30 @@
 </section>
 
 <section>
+	<h2>Configuration Management</h2>
+	<ul>
+		<li class="fragment">Ansible</li>
+		<li class="fragment">Chef</li>
+		<li class="fragment">Puppet</li>
+	</ul>
+	<h1 class="fragment">Docker</h1>
+	<aside class="notes">
+		<ul>
+			<li>Vagrant Locally</li>
+			<li>Puppet Master in production</li>
+			<li>This not a course on Docker, we will keep it simple</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
 	<img data-src="img/docksal-logo.png" class="no-border" style="height: 80%; width: 80%">
+	<aside class="notes">
+		<ul>
+			<li>Zero Configuration</li>
+			<li>Hides everything about Docker from you in your home directory</li>
+		</ul>
+	</aside>
 </section>
 
 <section>
@@ -30,6 +53,11 @@
 
 <section>
 	<img data-src="img/Dependency-Stack_responsibility.png" class="no-border">
+	<aside class="notes">
+		<ul>
+			<li>Docksal manages everything in purple</li>
+		</ul>
+	</aside>
 </section>
 
 <section>
@@ -40,6 +68,24 @@
 			<li>Click on Setup Instructions</li>
 			<li>Click on Project Setup</li>
 			<li>Visit the page that was just created</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
+	<h2>Prerequisites</h2>
+	<ul>
+		<li>Virtualbox - <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></li>
+		<li>Docker Toolbox - <a href="https://www.docker.com/products/docker-toolbox">https://www.docker.com/products/docker-toolbox</a></li>
+		<li>Composer - <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a></li>
+	</ul>
+	<pre><code data-trim contenteditable style="min-height: 100px">
+# Move into your PATH
+$ mv composer.phar /usr/local/bin/composer
+	</code></pre>
+	<aside class="notes">
+		<ul>
+			<li>I believe these are prereqs</li>
 		</ul>
 	</aside>
 </section>

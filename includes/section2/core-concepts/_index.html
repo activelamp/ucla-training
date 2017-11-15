@@ -6,6 +6,12 @@
     <h2>Drupal Handbook</h2>
     <p>Getting started with Site building</p>
     <a class="fragment" href="https://www.drupal.org/site-building">https://www.drupal.org/site-building</a>
+    <aside class="notes">
+        <ul>
+            <li>Click through to the site and review</li>
+            <li>Explain what site building is again</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
@@ -14,8 +20,8 @@
         <ul>
             <li>Core</li>
             <li>Modules</li>
-            <li>Themes</li>
-            <li>Profiles</li>
+            <li>Themes / Sub-themes</li>
+            <li>Profiles / Sub-profiles</li>
         </ul>
     </aside>
 </section>
@@ -33,45 +39,55 @@
 <section>
     <h2>Exercise</h2>
     <ul>
-        <li>Change the name of your Drupal site.</li>
-        <li class="fragment">Add an article to your site</li>
+        <li class="fragment">Change the name of your Drupal site.</li>
+        <li class="fragment">Add an article to your site</li class="fragment">
         <li class="fragment">Edit the body field of your article</li>
     </ul>
+    <aside class="notes">
+        <ul>
+            <li>Play with the CMS, show how to manage content.</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
     <h2>Modules</h2>
     <ul>
-        <li>Extend core functionality with contribute code</li>
-        <li>Write code to make Drupal do what you want</li>
-        <li>Ability to enable and uninstall modules from the "Extend" menu in admin section.</li>
+        <li class="fragment">Extend core functionality with contributed code</li>
+        <li class="fragment">Write custom code to make Drupal do what you want</li>
+        <li class="fragment">Enable and uninstall modules from the "Extend" menu in admin section.</li>
     </ul>
-    <p>We won't be covering module development today.</p>
+    <h2 class="fragment">We won't be covering module development today.</h2>
 </section>
 
 <section>
     <h2>Exercise</h2>
     <ul>
-        <li>Enable the "Settings Tray" module</li>
+        <li class="fragment">Enable the "Settings Tray" module</li>
         <li class="fragment">Change the name of your Drupal site</li>
         <li class="fragment">Edit the User Account menu</li>
     </ul>
+    <aside class="notes">
+        <ul>
+            <li>Play with the CMS, show how to manage the site.</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
     <h2>Themes</h2>
     <ul>
-        <li>Controls the appearance of your site</li>
-        <li>Uses Twig templates to define markup</li>
-        <li>Override markup that Drupal outputs by default</li>
-        <li>Change the appearance of your site with the "Appearance" menu in admin section.</li>
+        <li class="fragment">Controls the appearance of your site</li>
+        <li class="fragment">Uses Twig templates to define markup</li>
+        <li class="fragment">Override markup that Drupal outputs by default</li>
+        <li class="fragment">Change the appearance of your site with the "Appearance" menu in admin section.</li>
     </ul>
 </section>
 
 <section>
     <h2>Exercise</h2>
     <ul>
-        <li>Download a contributed theme</li>
+        <li class="fragment">Download a contributed theme</li>
         <li class="fragment">Enable the theme</li>
     </ul>
 </section>
@@ -93,18 +109,18 @@ $ composer require drupal/jethro
 <section>
     <h2>Profiles</h2>
     <ul>
-        <li>Core, Modules, Themes, and Configuration packaged to create a "pre-baked" website</li>
-        <li>Site needs to be installed initially with profile</li>
-        <li>The basis for Drupal distributions</li>
+        <li class="fragment">Core, Modules, Themes, and Configuration packaged to create a "pre-baked" website</li>
+        <li class="fragment">The basis for Drupal distributions</li>
+        <li class="fragment">Site needs to be installed initially with profile</li>
     </ul>
-    <p>Site Farm Seed is a base distribution that we will extend</p>
+    <h3 class="fragment">Site Farm Seed is a base distribution that we will extend</h3>
 </section>
 
 <section>
     <h2>Exercise</h2>
     <ul>
-        <li>Download the Acquia Lightning distribution</li>
-        <li class="fragment">Install Drupal using Lightning profile</li>
+        <li class="fragment">Download the Acquia Lightning distribution</li>
+        <li class="fragment">Install Drupal using Lightning</li>
     </ul>
 </section>
 
@@ -116,27 +132,127 @@ $ composer create-project acquia/lightning-project lightning
 $ cd lightning
 $ mkdir .docksal
 $ fin up
-$ fin drush si --db-url=mysql://user:user@db/default --root=/var/www/docroot
+$ fin bash
+$ exit
+$ bin/drush si --db-url=mysql://user:user@db/default
 $ open http://lightning.docksal
     </code></pre>
     <aside class="notes">
         <ul>
-            <li></li>
+            <li>Show the Media stuff that comes with Lightning</li>
+            <li>Show the composer.json file</li>
         </ul>
     </aside>
 </section>
 
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li>Create Drupal installation using Site Farm</li>
+        <li class="fragment">Create a subprofile of sitefarm_seed</li>
+        <li class="fragment">Install Drupal using gcr subprofile</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Site Farm</h2>
+    <a href="https://github.com/ucdavis/sitefarm-distro-template">https://github.com/ucdavis/sitefarm-distro-template</a>
+    <aside class="notes">
+        <ul>
+            <li>Have everyone download the template</li>
+            <li>Rename sitefarm_subprofile to gcr_profile</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Boot and Install</h2>
+    <pre class="fragment"><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Modify docksal.env hostname before booting
+$ fin init
+$ open http://gcr.local
+    </code></pre>
+    <aside class="notes">
+        <ul>
+            <li>Open up the commands folder and show init</li>
+            <li>We will use this installation for the rest of the class</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Break???</h2>
+</section>
 
 <section>
     <h2>General Concepts (cont)</h2>
     <p>Content objects that come in core.</p>
     <ul>
-        <li>Node (Content)</li>
-        <li>Entity Types</li>
-        <li>Comment</li>
-        <li>Taxonomy</li>
-        <li>User</li>
+        <li class="fragment">Node (Content)</li>
+        <li class="fragment">Comment</li>
+        <li class="fragment">Taxonomy</li>
+        <li class="fragment">User</li>
     </ul>
+</section>
+
+<section>
+    <h2>Node</h2>
+    <p>A node is the generic term for any piece of content on your web site. The content type of the node will define what fields (or specific information) that node displays.</p>
+</section>
+
+<section>
+    <h2>Structured Content</h2>
+    <p class="fragment">Do not think of your site in terms of pages, think in terms of content.</p>
+    <p class="fragment">Content can take many shapes... (Home Page, Sidebar, RSS, etc...)</p>
+    <aside class="notes">
+        <ul>
+            <li>Talk about the importance of having a content model</li>
+            <li>Form follows function, you can build functionality first</li>
+            <li>Editors can begin getting used to entering content before frontend is done</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Comment</h2>
+    <p class="fragment">Hint: Use a third party service like Disqus for comments</p>
+</section>
+
+<section>
+    <h2>Taxonomy</h2>
+    <p>The practice of classifying content... categories, tags, etc...</p>
+    <ul>
+        <li class="fragment">Sections of sites</li>
+        <li class="fragment">RSS Feeds</li>
+        <li class="fragment">Menus</li>
+        <li class="fragment">Access Control</li>
+        <li class="fragment">Lots of modules based around Taxonomy</li>
+    </ul>
+</section>
+
+<section>
+    <h2>User</h2>
+    <p>Users that log into your site</p>
+    <ul>
+        <li class="fragment">Authentication</li>
+        <li class="fragment">Roles</li>
+        <li class="fragment">Permissions</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Entity Types</h2>
+    <p>Create custom schemas that don't fit a Core entity.</p>
+    <ul>
+        <li class="fragment">...if you need to create custom tables</li>
+        <li class="fragment">...if you want to define a PHP Class</li>
+        <li class="fragment">...if the data is not content</li>
+    </ul>
+</section>
+
+<section>
+    <h2>All Entities in Drupal are fieldable</h2>
+    <p class="fragment">You can create any "properties" on content objects all through the Drupal UI</p>
 </section>
 
 <section>
@@ -147,6 +263,107 @@ $ open http://lightning.docksal
         <li>Regions & Blocks</li>
         <li>Views</li>
         <li>Path</li>
+        <li>Image Styles</li>
         <li>Permissions</li>
+    </ul>
+</section>
+
+<section>
+    <img style="margin-top: -75px" data-src="img/it-menus.png" class="no-border">
+</section>
+
+<section>
+    <img style="margin-top: -75px" data-src="img/it-menus-admin.png" class="no-border">
+</section>
+
+<section>
+    <h2>Regions & Blocks</h2>
+    <p>Pages on your Drupal site are laid out in Regions. Blocks are discrete chunks of information that are displayed in the regions of your site's pages.</p>
+</section>
+
+<section>
+    <img style="margin-top: -75px" data-src="img/regions.png" class="no-border">
+</section>
+
+<section>
+    <img style="margin-top: -75px" data-src="img/regions2.png" class="no-border">
+</section>
+
+<section>
+    <h2>Views</h2>
+    <p>Visual query build for creating lists of content</p>
+</section>
+
+<section>
+    <h2>Path</h2>
+    <ul>
+        <li>Internal Drupal path</li>
+        <li>Path Alias</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Image styles</h2>
+    <p>Image styles are used to set presets for image processing. Define effects in the Drupal UI to apply to uploaded images</p>
+    <ul>
+        <li class="fragment">Scale & Crop</li>
+        <li class="fragment">Desaturate</li>
+        <li class="fragment">Rotate</li>
+        <li class="fragment">etc...</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Permissions</h2>
+    <p>Permissions can be set to be very specific and granule making for a powerful feature to use when developing a site's structure.</p>
+    <p>Apply permissions to roles</p>
+    <ul>
+        <li class="fragment">Administrator</li>
+        <li class="fragment">Content Editor</li>
+        <li class="fragment">Authenticated</li>
+        <li class="fragment">Anonymous</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Configuration</h2>
+    <p>Configuration is the collection of admin settings that determine how the site functions, as opposed to the content of the site.</p>
+</section>
+
+<section>
+    <h1>Exercise</h1>
+    <ul>
+        <li class="fragment">Export Configuration</li>
+        <li class="fragment">Commit and push code to your repository</li>
+        <li class="fragment">Create a Pull Request to the canonical repository</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Export Configuration</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Change the Config Sync directory to something not ignored.
+$ fin drush cex
+    </code></pre>
+</section>
+
+<section>
+    <h2>Git / Code Review workflow</h2>
+    <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">https://gist.github.com/Chaser324/ce0505fbed06b947d962</a>
+    <aside class="notes">
+        <ul>
+            <li>Discuss this process on the white board</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>Lunch!</h1>
+    <h3>When we get back:</h3>
+    <ul>
+        <li>Look at what Sitefarm Seed provides</li>
+        <li>Twig Basics</li>
+        <li>Theming Basics</li>
+        <li>Theming Hands On - Create a page from Hills</li>
     </ul>
 </section>

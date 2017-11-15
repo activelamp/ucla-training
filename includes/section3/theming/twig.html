@@ -1,0 +1,89 @@
+<section>
+    <h1>Twig Basics</h1>
+</section>
+
+<section>
+    <h2>Printing a Variable</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+{# Print a string #}
+{{ foo }}
+
+{# Print object property #}
+{{ bar.baz }}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Twig will check:</h2>
+        <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+// Array key.
+$foo['bar'];
+// Object property.
+$foo->bar;
+// Object method.
+$foo->bar();
+// Object get method convention.
+$foo->getBar();
+// Object is method convention.
+$foo->isBar();
+// Object dynamic object property is set and get property.
+`$foo->__isset('bar');`
+`$foo->__get('bar');`
+    </code></pre>
+</section>
+
+<section>
+    <h2>Filters</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+{# Print a string #}
+{{ foo | upper }}
+
+{# Print entire object except baz property #}
+{{ bar | without('baz') }}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Conditionals</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+{% if site_slogan %}
+  <div class="site-slogan">{{ site_slogan }}</div>
+{% endif %}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Loops</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+{% for item in items %}
+  {{ item.content }}
+{% endfor %}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Functions</h2>
+    <pre><code data-trim contenteditable class="twig" style="min-height: 100px">
+<h2{{ attributes.setAttribute('id', heading_id) }}>{{ label }}</h2>
+{% for item in items %}
+  {{ link(item.content, item.url) }}
+{% endfor %}
+    </code></pre>
+    <a class="fragment" href="https://www.drupal.org/docs/8/theming/twig/functions-in-twig-templates">https://www.drupal.org/docs/8/theming/twig/functions-in-twig-templates</a>
+    <aside class="notes">
+        <ul>
+            <li>Code sample doesn't render properly</li>
+            <li>Visit the link and show the examples</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Lots more...</h2>
+    <a href="https://twig.symfony.com/doc/2.x/">https://twig.symfony.com/doc/2.x/</a>
+    <p class="fragment">Happy reading!</p>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>

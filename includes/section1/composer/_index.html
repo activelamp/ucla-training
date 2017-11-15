@@ -6,11 +6,39 @@
 <section>
     <h2>Application Dependencies</h2>
     <img data-src="img/Dependency-Tree.png" class="no-border">
+    <aside class="notes">
+        <ul>
+            <li>Your application code should only contain your code</li>
+            <li>Dependent libraries should not be committed in your code</li>
+            <li>Most languages have a dependency manager... Gems, npm packages, composer packages, etc...</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Dependency Manifest</h2>
+    <em class="fragment">composer.json</em>
+</section>
+
+<section>
+    <img data-src="img/composer-json.png" class="no-border">
+    <aside class="notes">
+        <ul>
+            <li>All dependencies in a manifest file</li>
+            <li>Control the version of the dependency in the manifest</li>
+            <li>Upgrading dependencies is very simple</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
     <h2>Drupal Composer Template</h2>
     <a class="fragment" href="https://github.com/drupal-composer/drupal-project">https://github.com/drupal-composer/drupal-project</a>
+    <aside class="notes">
+        <ul>
+            <li>Click the link and review the README</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
@@ -29,6 +57,7 @@ $ composer require drupal/devel:~1.0
         <ul>
             <li>Click the link and read through the docs with the class.</li>
             <li>Open the directory in PHPStorm and show Drupal dir and vendor dir.</li>
+            <li>Run `fin config`</li>
         </ul>
     </aside>
 </section>
@@ -75,14 +104,21 @@ $ fin drush sql-drop --root=/var/www/web
 $ fin drush si --yes --root=/var/www/web
     </code></pre>
     <p class="fragment">Note: This is factor 12</p>
+    <aside class="notes">
+        <ul>
+            <li>Factor 12</li>
+            <li>This command uses the CLI container to run command</li>
+            <li>You don't need the CLI tools in the web container</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
     <h2>Review</h2>
     <pre class="fragment"><code data-trim contenteditable class="bash" style="min-height: 100px">
-$ composer create-project drupal-composer/drupal-project:8.x-dev gcr2 --stability dev --no-interaction
+$ composer create-project drupal-composer/drupal-project:8.x-dev gcr --stability dev --no-interaction
 
-$ cd gcr2
+$ cd gcr
 
 $ mkdir .docksal
 
@@ -90,9 +126,9 @@ $ echo DOCROOT=web > .docksal/docksal.env
 
 $ fin up
 
-$ fin drush si --db-url=mysql://user:user@db/default --root=/var/www/web
+$ fin drush si --db-url=mysql://user:user@db/default --site-name="Drupal 8 Training" --root=/var/www/web
 
-$ open http://gcr2.docksal
+$ open http://gcr.docksal
 
     </code></pre>
 </section>
