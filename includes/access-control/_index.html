@@ -1,0 +1,130 @@
+<section>
+    <h1>Access Control</h1>
+    <p class="fragment">Also known as <em>Authorization</em></p>
+</section>
+
+<section>
+    <h2>Authentication <br>vs <br>Authorization</h2>
+    <aside class="notes">
+        <ul>
+            <li>Explain what the difference is</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Drupal core comes with a thin layer of authorization capabilities</h2>
+    <aside class="notes">
+        <ul>
+            <li>You can set what roles can create / edit specific node types</li>
+            <li>You can only have access to view all content or no content</li>
+        </ul>
+    </aside>
+</section>
+
+<section data-background-image="img/authorization-example.png" data-background-position="top"></section>
+
+<section>
+    <p>Excerpt from <strong>Content Intake Functional Outline</strong></p>
+    <blockquote>A Contributor has a temporary account with permission to edit specifically assigned pages.</blockquote>
+    <aside class="notes">
+        <ul>
+            <li>This isn't possible in Drupal core</li>
+            <li>We have to find a module, or write our own module</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Drupal allows you to hook into access control</h2>
+    <ul>
+        <li class="fragment"><em>hook_node_access()</em></li>
+        <li class="fragment">Grants - <em>hook_node_access_records()</em></li>
+    </ul>
+    <p class="fragment">Out of scope for this training.</p>
+    <aside class="notes">
+        <ul>
+            <li>Drupal allows you to take complete control of access, however you want to achieve it.</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>GCR has two use cases for access control</h2>
+    <ul>
+        <li class="fragment">The Contributor cannot revert changes once submitted for approval.</li>
+        <li class="fragment">A Contributor has a temporary account with permission to edit specifically assigned pages.</li>
+    </ul>
+    <p class="fragment">Two different authorization models</p>
+    <aside class="notes">
+        <ul>
+            <li>Conflicting access - Grants have a priority that you can set, higher priority wins.</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Contributed Modules</h2>
+    <ul>
+        <li class="fragment">workflow_access <span class="fragment">- only Drupal 7</span></li>
+        <li class="fragment">permissions_by_term <span class="fragment">- view only control</span></li>
+        <li class="fragment">tac_lite <span class="fragment">- full control: read, update, delete</span></li>
+    </ul>
+    <p></p>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li class="fragment">Download tac_lite</li>
+        <li class="fragment">Enable and configure based on the README</li>
+        <li class="fragment">Manage access based on role</li>
+        <li class="fragment">Manage access based on individual user</li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>Edit the account of another user.  Go to the tac_lite access tab under edit.</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Download theme with Composer</h2>
+    <pre class="fragment"><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Download the module from drupal packagist
+$ composer require drupal/tac_lite
+    </code></pre>
+    <aside class="notes">
+    </aside>
+</section>
+
+<section>
+    <h2>Export Configuration</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Change the Config Sync directory to something not ignored.
+$ fin drush cex
+    </code></pre>
+</section>
+
+<section>
+    <h2>Git / Code Review workflow</h2>
+    <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">https://gist.github.com/Chaser324/ce0505fbed06b947d962</a>
+    <aside class="notes">
+        <ul>
+            <li>Discuss this process on the white board</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <h1>Lunch!</h1>
+    <h3>When we get back:</h3>
+    <ul>
+        <li>Drupal Automations</li>
+        <li>Views / Maps</li>
+        <li>Build out a page</li>
+    </ul>
+</section>

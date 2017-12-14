@@ -1,0 +1,125 @@
+<section>
+    <h1>Drupal automations</h1>
+    <h2 class="fragment">Rules module</h2>
+</section>
+
+<section>
+    <p>The Rules module allows site administrators to define conditionally executed actions based on occurring events (known as reactive or ECA rules).</p>
+    <strong class="fragment">Event condition action</strong>
+</section>
+
+<section data-background-image="img/drupal_rules_simple_example.jpg" data-background-size="contain"></section>
+
+<section>
+    <h2>Excerpt from <strong>Content Intake Functional Outline</strong></h2>
+    <ul>
+        <li class="fragment">A notification email is generated when a user changes his/her password</li>
+        <li class="fragment">A notification email is generated when a user account is disabled or enabled.</li>
+        <li class="fragment">A notification email is generated when a Contributor account is assigned editing rights to content pages.</li>
+        <li class="fragment">...numerous more</li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>You get the idea, whenever you say something happens when something happens, that's rules module</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>This is an engineering design pattern to loosely couple functionality</h2>
+    <p class="fragment">Rules module allows you to define new events, conditions, and actions.</p>
+</section>
+
+<section>
+    <h2>A site administrator has the ability to connect functionality together through the UI</h2>
+</section>
+
+<section data-background-image="img/rules-ui.png" data-background-size="contain"></section>
+
+<section data-background-image="img/rules-configure.png" data-background-size="contain"></section>
+
+<section>
+    <h2>Rules is a subsystem framework within Drupal</h2>
+    <p class="fragment">You can extend rules</p>
+    <a class="fragment" href="https://fago.gitbooks.io/rules-docs/content/index.html">https://fago.gitbooks.io/rules-docs/content/index.html</a>
+</section>
+
+<section>
+    <h2>Extend Rules</h2>
+    <ul>
+        <li class="fragment">Define new Events</li>
+        <li class="fragment">Define new Conditions</li>
+        <li class="fragment">Define new Actions</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Rules allows you to make an extensible site for Administrators without any writing code</h2>
+    <aside class="notes">
+        <ul>
+            <li>You can write all of your custom logic within the framework of Rules and let your admins control everything.</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>YMMV</h1>
+</section>
+
+<section>
+    <h1>Rules Module</h1>
+    <ul>
+        <em>Pros:</em>
+        <li class="fragment">Allows Site Admins to execute actions based on events</li>
+        <li class="fragment">Extend functionality of the site thru the UI</li>
+    </ul>
+    <ul>
+        <em>Cons:</em>
+        <li class="fragment">Rules framework is very complex</li>
+        <li class="fragment">Rules can be heavier than just writing code</li>
+        <li class="fragment">The Drupal 8 version of Rules doesn't seem to be fully working</li>
+    </ul>
+</section>
+
+<section>
+    <p>IMO... don't use Rules unless it is a requirement for your site admins to add events and actions</p>
+</section>
+
+<section>
+    <p>If you use Rules... understand the extra complexity Rules brings with it.</p>
+</section>
+
+<section>
+    <h2>Rules has not hit stable release yet</h2>
+</section>
+
+<section>
+    <h3>I would use Rules for GCR</h3>
+    <ul>
+        <li class="fragment">Help find bugs</li>
+        <li class="fragment">Help fix bugs</li>
+        <li class="fragment">Help release a stable version of Rules</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Exercise</h1>
+    <ul>
+        <li>Download the Rules module</li>
+        <li>Setup a rule when a user is modified and blocked to send an email notifying them they are blocked</li>
+        <li>Event, Condition, Action</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Extending Rules</h2>
+    <p class="fragment">Out of scope for this training, possible next time?</p>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <h1>Break!</h1>
+</section>

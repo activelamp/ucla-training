@@ -1,0 +1,173 @@
+<section>
+    <h1>Content Modeling</h1>
+</section>
+
+<section>
+    <h2>What is a content model?</h2>
+    <div class="fragment">
+        <blockquote>
+            A content model documents all the different types of content you will have for a given project. It contains detailed definitions of each content type’s elements and their relationships to each other.
+        </blockquote>
+        <p>-- A List Apart</p>
+    </div>
+    <a class="fragment" href="https://alistapart.com/article/content-modelling-a-master-skill">https://alistapart.com/article/content-modelling-a-master-skill</a>
+</section>
+
+<section>
+    <h1>Day 1 Review</h1>
+    <h2 class="fragment">Structured Content</h2>
+    <ul>
+        <li class="fragment">Do not think of your site in terms of pages, think in terms of content.</li>
+        <li class="fragment">Content can take many shapes... (Home Page, Sidebar, RSS, etc...)</li>
+    </ul>
+
+    <aside class="notes">
+        <ul>
+            <li>Talk about the importance of having a content model</li>
+            <li>Form follows function, you can build functionality first</li>
+            <li>Editors can begin getting used to entering content before frontend is done</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>COPE</h2>
+    <p>Create Once, Publish Everywhere</p>
+    <a class="fragment" href="https://www.programmableweb.com/news/cope-create-once-publish-everywhere/2009/10/13">https://www.programmableweb.com/news/cope-create-once-publish-everywhere/2009/10/13</a>
+    <aside class="notes">
+        <ul>
+            <li>Holy grail</li>
+            <li>Not really pragmatic, but something to strive for</li>
+            <li>Think of Drupal as a CMS and a Web Publishing Tool</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>Keep content seperate from display</h1>
+</section>
+
+<section>
+    <h2>Content should be agnostic of display</h2>
+    <ul>
+        <li class="fragment">Webpage</li>
+        <li class="fragment">Mobile App</li>
+        <li class="fragment">Voice App (Alexa, Siri, etc...)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>For the geeks</h2>
+    <p>This sounds like MVC (Model View Controller pattern)</p>
+    <aside class="notes">
+        <ul>
+            <li>The model data can be represented by many different views</li>
+            <li>The model can be updated more than one way</li>
+            <li>Think of your content like an API</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Why is this important for the GCR community directory?</h2>
+    <em>"This information was then exported and de-duped for use in a <strong>200-page print directory</strong> as well as <strong>custom maps</strong> showing impact regionally and within each legislative district covering the Los Angeles area (city council, supervisorial, state assembly, state senate, congressional). "</em>
+</section>
+
+<section data-background-image="img/content-model.png" data-background-position="top">
+    <a class="fragment" href="https://ucla.invisionapp.com/share/7HEGNM1VS#/screens" style="background-color: white">https://ucla.invisionapp.com/share/7HEGNM1VS#/screens</a>
+    <aside class="notes">
+        <ul>
+            <li>Have everyone open the link for review.</li>
+            <li>Look for special types of fields.</li>
+            <li>Program</li>
+            <ul>
+                <li>Does the Program really have an address, or is that address for the Campus unit? another content type</li>
+                <li>Will the site every want to show more information for Campus Unit? another content type</li>
+                <li>Point out that the address fields are really one field (collection)</li>
+                <li>Could the same Manager be on more than one program? another content type.</li>
+                <li>Could the same Follow-up be on more than one program? another content type.</li>
+                <li>Do we need Photos and Testimonials on Program, or can that be an aggregation from Projects?</li>
+            </ul>
+            <li>Project</li>
+            <ul>
+                <li>Why are the description fields the same as on program? can it be another aggregation?</li>
+                <li>Project does not need the Category taxonomy, it is inherited from Program</li>
+            </ul>
+            <li>Partner</li>
+            <ul>
+                <li>I think we should create a vocabulary heirarchical Legislative Districts vocabulary.</li>
+                <li>Partner Type does not need to be a Taxonomy since it only ever applies to partners, just make it a field.</li>
+                <li>Writing a service to automatically assign the legislative district would be a good custom module to write when saving the partner.</li>
+            </ul>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Map the model to Drupal</h2>
+    <ul>
+        <li class="fragment">Program - <span class="fragment">Node</span></li>
+        <li class="fragment">Project - <span class="fragment">Node</span></li>
+        <li class="fragment">Partner - <span class="fragment">Node</span></li>
+        <li class="fragment">Category - <span class="fragment">Taxonomy</span></li>
+        <li class="fragment">Tags - <span class="fragment">Taxonomy</span></li>
+        <li class="fragment">Legislative Districts - <span class="fragment">Taxonomy</span></li>
+        <li class="fragment">Campus Unit - <span class="fragment">Node</span></li>
+        <li class="fragment">Manager - <span class="fragment">Node</span></li>
+        <li class="fragment">Follow-up - <span class="fragment">Node</span></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Do any of these content types map to Site Farm content types?</h2>
+    <ul>
+        <li class="fragment">Person</li>
+        <li class="fragment">Photo Gallery</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Are there any complex field types that may not exist in Drupal?</h2>
+    <ul>
+        <li class="fragment">Address</li>
+    </ul>
+    <p class="fragment">Sitefarm Seed already includes this</p>
+</section>
+
+<section>
+    <h1>Build the content model in Drupal</h1>
+    <a href="https://ucla.invisionapp.com/share/7HEGNM1VS#/screens">https://ucla.invisionapp.com/share/7HEGNM1VS#/screens</a>
+    <aside class="notes">
+        <ul>
+            <li>The model data can be represented by many different views</li>
+            <li>The model can be updated more than one way</li>
+            <li>Think of your content like an API</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Export Configuration</h2>
+    <pre><code data-trim contenteditable class="bash" style="min-height: 100px">
+# Change the Config Sync directory to something not ignored.
+$ fin drush cex
+    </code></pre>
+</section>
+
+<section>
+    <h2>Git / Code Review workflow</h2>
+    <a href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">https://gist.github.com/Chaser324/ce0505fbed06b947d962</a>
+    <aside class="notes">
+        <ul>
+            <li>Discuss this process on the white board</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <h1>Break</h1>
+</section>

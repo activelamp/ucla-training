@@ -1,0 +1,183 @@
+<section>
+    <h1>Content Workflows</h1>
+</section>
+
+<section>
+    <h2>Drupal has two default states for content</h2>
+    <ul>
+        <li class="fragment">Published</li>
+        <li class="fragment">Unpublished</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Excerpt from the content outline:</h2>
+    <blockquote>
+        1.d.iv.2.h The Contributor can submit the changes for approval.
+    </blockquote>
+</section>
+
+<section>
+    <h2>We need more content states</h2>
+    <ul>
+        <li>Published</li>
+        <li>Unpublished</li>
+        <li class="fragment">Review</li>
+        <li class="fragment">Draft</li>
+        <li class="fragment">Archive</li>
+    </ul>
+</section>
+
+<section>
+    <h2>What happens if you mark content as Draft?</h2>
+    <p>Does the content get hidden from the user?</p>
+    <aside class="notes">
+        <ul>
+            <li>You need to be able to show a revision of content while working on a different revision</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Content Moderation</h2>
+</section>
+
+<section>
+    <h2>New in Drupal 8.4</h2>
+    <p><strong><em>Content Moderation</em></strong> allows you to have a published version that is live, but have a separate working copy that is undergoing review before it is published.</p>
+    <a class="fragment" href="https://www.drupal.org/docs/8/core/modules/content-moderation/overview">https://www.drupal.org/docs/8/core/modules/content-moderation/overview</a>
+</section>
+
+<section>
+    <h2>Workflow Concepts</h2>
+    <ul>
+        <li class="fragment">States</li>
+        <li class="fragment">Transitions</li>
+    </ul>
+</section>
+
+<section data-background-image="img/workflow.png" data-background-size="95%">
+
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li class="fragment">Enable Workflow and Content Moderation</li>
+        <li class="fragment">Add the necessary content states for GCR</li>
+        <ul>
+            <li class="fragment">Review</li>
+            <li class="fragment">Draft</li>
+            <li class="fragment">Archive</li>
+        </ul>
+        <li class="fragment">Select the content types to apply workflow to</li>
+    </ul>j
+    <aside class="notes">
+        <ul>
+            <li>Have the class setup workflows for all content types they need it for</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Workflow Permissions</h2>
+    <p>Allow specific roles access to specific transitions</p>
+    <img data-src="img/transition-permissions.png" alt="">
+    <aside class="notes">
+        <ul>
+            <li>Have the class setup permissions</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Excerpt from the content outline:</h2>
+    <p>1.d.iv.2.h.iv The Contributor cannot revert changes once submitted for approval.</p>
+</section>
+
+<section>
+    <h2>This functionality is not built in</h2>
+</section>
+
+<section>
+    <h2>You will need to write a custom module for this</h2>
+    <ul>
+        <li class="fragment">Modify the <em>Edit</em> form for the state to add roles</li>
+        <li class="fragment">Modify <em>node_access</em> so that contributors can't edit nodes in <em>Review</em> state</li>
+        <li class="fragment">Create a node link on node <em>View</em> to transition state back to draft for editing</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Out of scope for this training</h2>
+    <p class="fragment">Maybe day 3 topic??</p>
+    <aside class="notes">
+        <ul>
+            <li>I'll talk more about access control in a few minutes, after the break</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Contributors Dashboard</h2>
+    <ul>
+        <li class="fragment">Workbench module</li>
+        <ul>
+            <li class="fragment">Provides a page with views</li>
+            <li class="fragment">Edits by User</li>
+            <li class="fragment">Recent Content</li>
+        </ul>
+        <li class="fragment">Add your own views to this page</li>
+        <ul>
+            <li class="fragment">Content in a specific state</li>
+            <li class="fragment">etc...</li>
+        </ul>
+    </ul>
+</section>
+
+<section data-background-image="img/workbench.png" data-background-size="95%"></section>
+
+<section data-background-image="img/workbench-settings.png" data-background-size="95%"></section>
+
+<section>
+    <h2>Exercise</h2>
+    <p class="fragment">Add "Content to Review" on dashboard</p>
+    <ul>
+        <li class="fragment">Views UI Crash Course</li>
+        <li class="fragment">User Permissions</li>
+        <li class="fragment">Masquerade</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Views Concepts</h2>
+    <p>Visual query builder within CMS</p>
+    <ul>
+        <li class="fragment">Display Format</li>
+        <li class="fragment">Fields</li>
+        <li class="fragment">Filters</li>
+        <li class="fragment">Sort</li>
+        <li class="fragment">Relationships</li>
+        <li class="fragment">...bunch of other stuff too</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Build the view</h1>
+    <aside class="notes">
+        <ul>
+            <li>Ensure the correct permissions</li>
+            <li>Modify the Workbench configuration</li>
+            <li>Masquerade as the user</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <h1>Break!</h1>
+</section>
+

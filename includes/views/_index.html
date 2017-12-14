@@ -1,0 +1,123 @@
+<section>
+    <h1>Views / Maps</h1>
+</section>
+
+<section>
+    <h2>Views Concepts (Review)</h2>
+    <p>Visual query builder within CMS</p>
+    <ul>
+        <li class="fragment" data-fragment-index="0"><span data-fragment-index="5" class="fragment highlight-red">Display Format</span></li>
+        <li class="fragment" data-fragment-index="1">Fields</li>
+        <li class="fragment" data-fragment-index="2">Filters</li>
+        <li class="fragment" data-fragment-index="3">Sort</li>
+        <li class="fragment" data-fragment-index="4">Relationships</li>
+    </ul>
+</section>
+
+<section>
+    <h2>More Views Concepts</h2>
+    <ul>
+        <li class="fragment">Filters</li>
+        <li class="fragment">Contextual Filters</li>
+        <li class="fragment">Exposed Filters</li>
+    </ul>
+</section>
+
+<section>
+    <p>A map is just a <span class="fragment highlight-red" data-fragment-index="1">list</span> of points<span class="fragment fade-up" data-fragment-index="2">, displayed on a map.</span></p>
+</section>
+
+<section data-background-image="img/map.png" data-background-size="contain"></section>
+
+<section data-background-image="img/location-table.png" data-background-size="contain"></section>
+
+<section>
+    <h1>Review</h1>
+    <ul>
+        <li class="fragment">Keep content seperate from display</li>
+        <li class="fragment">Content should be agnostic of display</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Views Displays</h2>
+    <p>Different UI for the same content</p>
+</section>
+
+<section data-background-image="img/map-display.png" data-background-size="contain"></section>
+
+<section data-background-image="img/table-display.png" data-background-size="contain"></section>
+
+<section>
+    <h2>Geolocation Module FTW!</h2>
+    <ul>
+        <li class="fragment">Google Maps Formatter</li>
+        <li class="fragment">Google Geocoding Widget</li>
+        <li class="fragment">Custom Map Markers</li>
+        <li class="fragment">Custom Marker by type</li>
+        <li class="fragment">Clustering</li>
+    </ul>
+    <p class="fragment">All requirements for the site</p>
+    <aside class="notes">
+        <ul>
+            <li>From the requirements doc</li>
+        </ul>
+    </aside>
+</section>
+
+<section data-background-image="img/map-marker.png" data-background-size="contain"></section>
+
+<section data-background-image="img/cluster.png" data-background-size="contain"></section>
+
+<section>
+    <h2>Geolocation (cont)</h2>
+    <ul>
+        <li class="fragment">Proximity Field</li>
+        <li class="fragment">Proximity Filter</li>
+        <li class="fragment">Boundary Filter</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Exercise</h2>
+    <ul>
+        <li class="fragment">Download the geolocation field</li>
+        <li class="fragment">Configure a content type with the field</li>
+        <li class="fragment">Create a Google API key</li>
+        <li class="fragment">Turn on both Maps Javascript API and Geocoding API</li>
+        <li class="fragment">Create a few nodes with addresses and assign to multiple terms.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Exercise (cont)</h2>
+    <ul>
+        <li class="fragment">Create a View (block)</li>
+        <li class="fragment">Create two displays: Map and Table</li>
+        <li class="fragment">Only show geocoded data</li>
+        <li class="fragment">Configure markers to differ based on term</li>
+        <li class="fragment">Enable clustering</li>
+    </ul>
+</section>
+
+<section data-background-image="img/pin-count.png" data-background-size="top"></section>
+
+<section>
+    <h2>Custom module</h2>
+    <p>Provide the count of pins visible on map</p>
+    <ul>
+        <li class="fragment">Create a custom block</li>
+        <li class="fragment">Bind Event to the Map on 'idle'</li>
+        <li class="fragment">Get the bounds of the Map</li>
+        <li class="fragment">Loop through all markers and count if contained in bounds</li>
+    </ul>
+    <p class="fragment">Out of scope for today.</p>
+</section>
+
+<section>
+    <h1>Questions?</h1>
+</section>
+
+<section>
+    <h1>Break!</h1>
+</section>
